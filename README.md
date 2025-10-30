@@ -41,12 +41,14 @@ Enter the repository URL:
 
 https://github.com/Alamofire/Alamofire.git
 
+
 Choose the latest version and add it to your project target.
 
 Then clone or copy the API_Manager files into your project.
 
 🧠 Usage Example
 1️⃣ Basic GET Request (with Codable)
+
 API_Manager.shared.GET_METHOD(
     requestURL: "objects",
     encodingType: .urlEncoding,
@@ -62,6 +64,7 @@ API_Manager.shared.GET_METHOD(
 }
 
 2️⃣ Raw Dictionary Response (without model)
+
 API_Manager.shared.GET_METHOD(
     requestURL: "objects",
     encodingType: .urlEncoding,
@@ -76,10 +79,12 @@ API_Manager.shared.GET_METHOD(
 }
 
 🧩 Example Parameter Encodings
-Encoding Type    Description    Use Case
-.jsonEncoding    Sends data as JSON in the request body    POST, PUT APIs
-.urlEncoding    Sends data in the URL query string    GET, lightweight requests
-.multipart    Sends files and form data together    File/Image uploads
+
+| Encoding Type   | Description                            | Use Case                    |
+| --------------- | -------------------------------------- | --------------------------- |
+| `.jsonEncoding` | Sends data as JSON in the request body | `POST`, `PUT` APIs          |
+| `.urlEncoding`  | Sends data in the URL query string     | `GET`, lightweight requests |
+| `.multipart`    | Sends files and form data together     | File/Image uploads          |
 
 ⚡ Error Handling
 
